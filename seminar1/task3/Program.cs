@@ -21,5 +21,33 @@ if (number == 1) {
     Console.WriteLine("Yakshanba");
 } else {
     Console.WriteLine("V nedeli sushastvuet tolko 7 dney.");
-    Console.WriteLine("Vvedite znachenie 1 do 7");
 }
+
+//mojnmo i napisat if i else v odni strochku:
+
+if (number == 1) Console.WriteLine("Dushanba");
+if (number == 2) Console.WriteLine("Seshanba");
+if (number == 3) Console.WriteLine("Chorshanba");
+if (number == 4) Console.WriteLine("Payshanba");
+if (number == 5) Console.WriteLine("Juma");
+if (number == 6) Console.WriteLine("Shanba");
+if (number == 7) Console.WriteLine("Yakshanba");
+else Console.WriteLine("V nedeli sushastvuet tolko 7 dney.");
+
+// Proverku na nevernochislo mojno srazu posle vvedenie chisla. 
+// Eto umenshaet nagruzku i ne daet ustroystvo idti na nenaprasuyu usilie
+
+// Tak shto sdelaem tak:
+Console.Write("Vvedite chislo dnya nedeli: ");
+int number = int.Parse(Console.ReadLine());
+if (number > 7 || number < 1) Console.WriteLine("V nedeli sushastvuet tolko 7 dney."); 
+if (number == 1) Console.WriteLine("Dushanba");
+if (number == 2) Console.WriteLine("Seshanba");
+if (number == 3) Console.WriteLine("Chorshanba");
+if (number == 4) Console.WriteLine("Payshanba");
+if (number == 5) Console.WriteLine("Juma");
+if (number == 6) Console.WriteLine("Shanba");
+if (number == 7) Console.WriteLine("Yakshanba");
+
+// Nam nechego nenado napisat "else" tak kak nabrat mojno tolko chislo. 
+// Potomu chto tam stoit "int" i eto kompensiruet "else"
