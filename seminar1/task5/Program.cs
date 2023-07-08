@@ -6,6 +6,7 @@
 Console.Write("Vvedite chislo: ");
 int N = int.Parse(Console.ReadLine());
 int minusN = N * -1;
-for (int i = minusN; i <= N; i++) {
-    Console.Write($"{i} ");
+for (int i = minusN; i < N; i++) {
+    Console.Write($"{i}, ");
 }
+Console.WriteLine(N);
