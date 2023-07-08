@@ -6,4 +6,5 @@
 
 Console.Write("Vvedite trexnachnoe chilo: ");
 int number = int.Parse(Console.ReadLine());
+int lastnum = number % 10;
 Console.WriteLine($"Poslednaya chislo {number} eto {number % 10}");
