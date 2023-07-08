@@ -39,15 +39,15 @@ else Console.WriteLine("V nedeli sushastvuet tolko 7 dney.");
 
 // Tak shto sdelaem tak:
 Console.Write("Vvedite chislo dnya nedeli: ");
-int number = int.Parse(Console.ReadLine());
-if (number > 7 || number < 1) Console.WriteLine("V nedeli sushastvuet tolko 7 dney."); 
-if (number == 1) Console.WriteLine("Dushanba");
-if (number == 2) Console.WriteLine("Seshanba");
-if (number == 3) Console.WriteLine("Chorshanba");
-if (number == 4) Console.WriteLine("Payshanba");
-if (number == 5) Console.WriteLine("Juma");
-if (number == 6) Console.WriteLine("Shanba");
-if (number == 7) Console.WriteLine("Yakshanba");
+int number3 = int.Parse(Console.ReadLine());
+if (number3 > 7 || number < 1) Console.WriteLine("V nedeli sushastvuet tolko 7 dney."); 
+if (number3 == 1) Console.WriteLine("Dushanba");
+if (number3 == 2) Console.WriteLine("Seshanba");
+if (number3 == 3) Console.WriteLine("Chorshanba");
+if (number3 == 4) Console.WriteLine("Payshanba");
+if (number3 == 5) Console.WriteLine("Juma");
+if (number3 == 6) Console.WriteLine("Shanba");
+if (number3 == 7) Console.WriteLine("Yakshanba");
 
 // Nam nechego nenado napisat "else" tak kak nabrat mojno tolko chislo. 
 // Potomu chto tam stoit "int" i eto kompensiruet "else"

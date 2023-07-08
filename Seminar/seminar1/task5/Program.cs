@@ -4,12 +4,12 @@
 // 2 -> "-2, -1, 0, 1, 2"
 
 Console.Write("Vvedite chislo: ");
-int N = int.Parse(Console.ReadLine());
-int minusN = N * -1;
-for (int i = minusN; i < N; i++) {
+int M = int.Parse(Console.ReadLine());
+int minusN = M * -1;
+for (int i = minusN; i < M; i++) {
     Console.Write($"{i}, ");
 }
-Console.WriteLine(N);
+Console.WriteLine(M);
 
 // v programmirovanie ne obizatelno umnojat chislo na -1 shtobi poluchit minus
 // prosto mojno napisat -N
