@@ -11,7 +11,7 @@ for (int i = minusN; i < N; i++) {
 }
 Console.WriteLine(N);
 
-// v programmirovanie ne obizatelnoe chislo umnojat na -1 shto poluchit minus
+// v programmirovanie ne obizatelno umnojat chislo na -1 shtobi poluchit minus
 // prosto mojno napisat -N
 
 Console.Write("Vvedite chislo: ");
