@@ -4,5 +4,6 @@
 // 782 -> 2
 
 
-
-Console.WriteLine("Hello, World!");
+Console.Write("Vvedite trexnachnoe chilo: ");
+int number = int.Parse(Console.ReadLine());
+Console.WriteLine($"Poslednaya chislo {number} eto {number % 10}");
