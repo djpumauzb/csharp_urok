@@ -1,7 +1,6 @@
-﻿// Napsihite programmu, kotoraya na vxod prinimaet chislo i vidaet,
-// yavlyaetsya li chislo chetnim (delitsya li ono na dva bez ostatka)
-// 4 -> da
-// -3 -> net
-// 7 -> net
+﻿// Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+// 4 -> да
+// -3 -> нет
+// 7 -> нет
 
 Console.WriteLine("Hello, World!");
