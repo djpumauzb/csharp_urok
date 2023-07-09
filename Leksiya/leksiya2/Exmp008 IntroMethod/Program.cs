@@ -21,6 +21,9 @@ int b3 = 91;
 int c3 = 4;
 
 int max1 = Max(a1, b1, c1);
+int max2 = Max(a2, b2, c2);
+int max3 = Max(a3, b3, c3);
+int max = Max(ma1, max2, max3);
 
 // if (b1 > max) max = b1;
 // if (c1 > max) max = c1;
@@ -33,4 +36,4 @@ int max1 = Max(a1, b1, c1);
 // if (b3 > max) max = b3;
 // if (c3 > max) max = c3;
 
-Console.WriteLine($"Max number is {max1}");
+Console.WriteLine($"Max number is {max}");
