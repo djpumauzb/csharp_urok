@@ -3,4 +3,8 @@
 // -3 -> нет
 // 7 -> нет
 
-Console.WriteLine("Hello, World!");
+Console.Write("Vvedite chislo: ");
+int num = int.Parse(Console.ReadLine());
+if (num == 0) Console.WriteLine("0 ne yavlaetsya chetnim ili nechetnim :)");
+if (num % 2 == 0 & num != 0) Console.WriteLine("Yes");
+if (num % 2 != 0 & num != 0) Console.WriteLine("No");
