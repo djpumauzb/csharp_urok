@@ -11,11 +11,12 @@ if (num1 == num2) {
     Console.WriteLine("Vvedite razni chisla");
     Console.WriteLine("odni odinakovie )");     // dlya togo shtobi polzovatel ne vvel odinakovie znachenie )
 }
-
+int min = 0;
 int max = 0;
-if (num1 > num2) max = num1;
-if (num1 < num2) max = num2;
+if (num1 > num2) max = num1; min = num2;
+if (num1 < num2) max = num2; min = num1;
 
 if (num1 == max || num2 == max) {               // a eto chto bi ne srabativalo etot writeline sam po sebe, atolko togda kogda doydet do syuda) 
 Console.WriteLine($"Max = {max}");
+Console.WriteLine($"Min = {min}");
 }
