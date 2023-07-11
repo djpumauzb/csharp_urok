@@ -17,5 +17,5 @@ if (ostatok == 0) {
     Console.WriteLine("Kratno");
 }
 if (ostatok != 0) {
-    Console.WriteLine(ostatok);
+    Console.WriteLine($"Ne kratno, ostatok {ostatok}");
 }
