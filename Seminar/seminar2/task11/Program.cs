@@ -9,10 +9,14 @@
 
 
 
-//int num = new Random().Next(100, 1000);
+int num = new Random().Next(100, 1000);
 
-int num = 798;
 int dig1 = num / 100;  
-int dig2 = num % 10;  
+int dig2 = num % 10;
 
-Console.WriteLine($"{dig1}{dig2}");
+// mojno i tak:
+// num / 100 * 10; - pervoe chislo s odavlenoim 0 pri umnojenii nebudet konfliktov
+// num % 100 % 10; - poslednee chislo no netuu smisla mojno i srazu num % 10
+// i posle dig1 + dig2 = esli 956 to budet 90 + 6 = 96
+
+Console.WriteLine($"V chisle: {num} -> {dig1}{dig2}");
