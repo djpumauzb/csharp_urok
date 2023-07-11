@@ -6,7 +6,7 @@
 
 Console.Write("Vvedite chislo: ");
 int num = int.Parse(Console.ReadLine());
-if (num > 999 || num < 99) {
+if (num >= 999 || num <= 99) {
     Console.WriteLine("Vvedite tolko trexznachnoe chislo :(");
 } else {
     int del = num / 10;
