@@ -2,20 +2,18 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.Write("Vvedite chislo: ");
+Console.Write("Введите число: ");
 int N = int.Parse(Console.ReadLine());
-int i = 0;
-if (N == 0 || N < 0) Console.WriteLine("Vvedite chislo bolshe 0 !!!");
 
-while (i < N & N != 0) {
-    if (i % 2 == 0 & i != 0) {
-        Console.Write($"{i}, ");
+if (N <= 0) {
+    Console.WriteLine("Введите число больше 0!");
+} else {
+    Console.Write("Чётные числа: ");
+    for (int i = 2; i <= N; i += 2) {
+        Console.Write(i);
+        if (i != N && i + 2 <= N) {         // а убрать "," в последном числе было не просто )
+            Console.Write(", ");
+        }
     }
-    i++;
-}
-
-if (N != 0 || N > 0) {
-    if (N % 2 == 0) {
-    Console.WriteLine(N);
-    }
+    Console.WriteLine();
 }
