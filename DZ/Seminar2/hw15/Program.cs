@@ -21,7 +21,7 @@ if (num < 1 || num > 7) {
     if (num == saturday || num == sunday) {
         Console.WriteLine($"{num} -> yes");
     } else {
-        Console.WriteLine($"{num} -> no");
+        Console.WriteLine($"{num} ->no");
     }
 
 }
