@@ -3,3 +3,14 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
+
+
+
+int GetInfo(string msg)
+{
+    Console.Write(msg);
+    int inputNum = Convert.ToInt32(Console.ReadLine());
+    return inputNum;
+}
+
+int num = GetInfo("Vvedite chislo N: ");
