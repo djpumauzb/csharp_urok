@@ -2,15 +2,15 @@
 // zapolnenniy nulyami i edinicami v sluchaynom poryadke
 // [1,0,1,1,1,0]
 
-
-int[] massiv = new int[8];
-Random randomNum = new Random();
-for (int i = 0; i < 8; i++)
+int[] MekeNewBinaryArray(int size)
 {
-    massiv[i] = randomNum.Next(0, 2);
+    int[] massiv = new int[size];
+    for (int i = 0; i < size; i++) 
+        massiv[i] = new Random().Next(2);
+    return massiv;
 }
 
-string joinedArray = string.Join(",", massiv);
-Console.WriteLine(joinedArray);
+int[] massiv = MekeNewBinaryArray(8);
+Console.WriteLine(string.Join(",", massiv));
 
 
