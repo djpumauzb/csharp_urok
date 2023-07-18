@@ -39,7 +39,7 @@ else
 
 
 // Better way with sting
-string CheckNumArray(int[] array, int number) // proverit number v massive i vernet tekst
+string CheckNumArray1(int[] array, int number) // proverit number v massive i vernet tekst
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -48,7 +48,7 @@ string CheckNumArray(int[] array, int number) // proverit number v massive i ver
     return "No";
 }
 
-int[] NewRandomArray(int size, int minValue, int maxValue) // Pechataet randomnie massivi s opredelonnimi diapazonami
+int[] NewRandomArray1(int size, int minValue, int maxValue) // Pechataet randomnie massivi s opredelonnimi diapazonami
 {
     int[] massiv = new int[size];
     for (int i = 0; i < size; i++)
@@ -56,14 +56,7 @@ int[] NewRandomArray(int size, int minValue, int maxValue) // Pechataet randomni
     return massiv;
 }
 
-int GetInfo(string msg)
-{
-    Console.Write(msg);
-    int inputNum = Convert.ToInt32(Console.ReadLine());
-    return inputNum;
-}
+int[] array1 = NewRandomArray1(5, -9, 9);
+int num1 = GetInfo("Vvedite cislo: ");
 
-int[] array = NewRandomArray(5, -9, 9);
-int num = GetInfo("Vvedite cislo: ");
-
-Console.Write($"{num} -> [{string.Join(",", array)}] -> {CheckNumArray(array, num)} ");
+Console.Write($"{num1} -> [{string.Join(",", array1)}] -> {CheckNumArray(array1, num1)} ");
