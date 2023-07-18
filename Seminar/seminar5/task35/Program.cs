@@ -5,11 +5,6 @@
 // [1, 2, 3, 6, 2] -> 0
 // [10, 11, 12, 13, 14] -> 5
 
-
-
-
-
-
 int[] NewRandomArray(int size, int minValue, int maxValue) // Pechataet randomnie massivi s opredelonnimi diapazonami
 {
     int[] massiv = new int[size];
@@ -30,8 +25,6 @@ int DefCount(int[] array)
     }
     return result;
 }
-
-
 
 int[] array = NewRandomArray(123, 0, 140);
 
