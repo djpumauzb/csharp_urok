@@ -1,20 +1,21 @@
-﻿// naydite proizvedenie par chisel v odnomernom massive. 
-// Paroy schitaem perviy i posledniy element, vtoroy i predposledniy i t.d. 
-// Prezultat zapishite v novom massive
-// [1 2 3 4 5] -> 5 8 3
-// [6 7 3 6] -> 36 21
+﻿// // naydite proizvedenie par chisel v odnomernom massive. 
+// // Paroy schitaem perviy i posledniy element, vtoroy i predposledniy i t.d. 
+// // Prezultat zapishite v novom massive
+// // [1 2 3 4 5] -> 5 8 3
+// // [6 7 3 6] -> 36 21
 
 
 int[] SimmetricSumm(int[] array)
 {
-    int size = array.Length;
-    if (size % 2 == 1) size++;
-    int[] arrayNew = new int[array.Length / 2];
+    int size = array.Length / 2;
+    if (array.Length % 2 == 1) size++;
+    int[] arrayNew = new int[size];
     for (int i = 0; i < array.Length / 2; i++)
     {
         arrayNew[i] = array[i] * array[array.Length - i - 1];
     }
-    if (array.Length % 2 == 1) arrayNew(size -1) = array[array.Length -1];
+    if (array.Length % 2 == 1)
+        arrayNew[size - 1] = array[array.Length / 2];
     return arrayNew;
 }
 
@@ -29,5 +30,4 @@ int[] NewRandomArray(int size, int minValue, int maxValue) // Pechataet randomni
 
 int[] array = NewRandomArray(5, 0, 10);
 int[] newArray = SimmetricSumm(array);
-
-Console.Write($"[{string.Join(",", array)}] -> {string.Join(" ", newArray)}");
+Console.WriteLine($"[{string.Join(",", array)}] -> {string.Join(" ", newArray)}");
