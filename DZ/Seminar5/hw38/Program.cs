@@ -2,26 +2,38 @@
 // Найдите разницу между максимальным и минимальным элементов массива.
 // [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
-int GetOddSum(int[] array)
+string GetOddSum(double[] array)
 {
-    int summ = 0;
+    double maxArr = array[0];
+    double minArr = array[0];
+    double difference = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 != 0)
+        if (array[i] > maxArr)
         {
-            summ = summ + array[i];
+            maxArr = array[i];
+        }
+        if (array[i] < minArr)
+        {
+            minArr = array[i];
         }
     }
-    return summ;
+    difference = maxArr - minArr;
+    string convertDiff = difference.ToString("0.##").Replace(',', '.');
+    string convertmaxArr = maxArr.ToString("0.##").Replace(',', '.');
+    string convertminArr = minArr.ToString("0.##").Replace(',', '.');
+    return $"{convertmaxArr} - {convertminArr} = {convertDiff}";
 }
 
-double[] NewRandomArray(int size, double minValue, double maxValue) // Pechataet randomnie massivi s opredelonnimi diapazonami
+double[] NewRandomArray(int size, double minValue, double maxValue)
 {
-    int[] massiv = new int[size];
+    double[] massiv = new double[size];
     for (int i = 0; i < size; i++)
-        massiv[i] = new Random().Next(minValue, maxValue);
+        massiv[i] = new Random().NextDouble() * (maxValue - minValue) + minValue; // NextDouble() ne prinimaet 2 zchnachenie prishlos ispolzovat' GPT :(
     return massiv;
 }
-int[] array = NewRandomArray(4, -100, 100);
 
-Console.Write($"[{string.Join(",", array)}] -> {GetOddSum(array)}");
+double[] array = NewRandomArray(5, 1, 100);
+string[] formatedArray = Array.ConvertAll(array, x => x.ToString("0.##").Replace(',', '.'));
+string result = GetOddSum(array);
+Console.Write($"[{string.Join(", ", formatedArray)}] -> {result}");
