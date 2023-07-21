@@ -28,6 +28,20 @@ void PrintArray(int[,] matrix)
     }
 }
 
+void PrintImage(int[,] img) // printit zadanniy massiv kak izob.
+{
+    for (int i = 0; i < img.GetLength(0); i++)
+    {
+        for (int j = 0; j < img.GetLength(1); j++)
+        {
+            // Console.Write($"{img[i, j]} ");
+            if (img[i,j] == 0) Console.Write($" ");
+            else Console.Write($"+");
+        }
+        Console.WriteLine();
+    }
+}
+
 void FillArray(int[,] matr)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
@@ -44,3 +58,18 @@ int[,] matrix = new int[3, 4];
 PrintArray(matrix);
 FillArray(matrix);
 PrintArray(matrix);
+
+void FillImg(int row, int col) // dvijenie s risofkoy
+{
+    if (pic[row, col] == 0)
+    {
+        pic[row, col] = 1;
+        FillImg(row-1, col);
+        FillImg(row, col-1);
+        FillImg(row+1, col);
+        FillImg(row, col+1);
+    }
+}
+
+PrintImage(pic); // bo'yalmagan
+FillImg(13,13); // bo'yalgan
