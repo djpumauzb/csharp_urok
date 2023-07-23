@@ -16,6 +16,20 @@ int[] DefRec(int num)
     return array;
 }
 
+void Fibonachi(int num) // the another way with Conosle.Write -> 01 "
+{
+    double num1 = 0;
+    double num2 = 1;
+    double num3 = 0;
+    for (int i = 2; i < num; i++)
+    {
+        num3 = num1 + num2;
+        Console.Write($"{num3}");
+        num1 = num2;
+        num2 = num3;
+    }
+}
+
 int GetInfo(string msg)
 {
     Console.Write(msg);
@@ -26,3 +40,4 @@ int GetInfo(string msg)
 int num = GetInfo("Vvedite chislo: ");
 int[] recursion = DefRec(num);
 Console.WriteLine($"N = {num} -> {string.Join(" ", recursion)}");
+
