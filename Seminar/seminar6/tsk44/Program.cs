@@ -16,11 +16,12 @@ int[] DefRec(int num)
     return array;
 }
 
-void Fibonachi(int num) // the another way with Conosle.Write -> 01 "
+void Fibonachi(int num) // the another better way
 {
     double num1 = 0;
     double num2 = 1;
     double num3 = 0;
+    Console.Write($"{num} -> 0 1");
     for (int i = 2; i < num; i++)
     {
         num3 = num1 + num2;
