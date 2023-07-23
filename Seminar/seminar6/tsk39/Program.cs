@@ -4,18 +4,15 @@
 // [6 7 3 6] -> [6 3 7 6]
 
 
-int[] ReversedArray(int[] array)
+void ReversedArray(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length / 2; i++) //doljno do polovini massiva dalshe bez sxmisla vernet na mesto
     {
-         int temp = array[i];
-        array[i] = array[array.Length-1];
-        array[array.Length-1] = temp;
+        int temp = array[i];
+        array[i] = array[array.Length - 1 - i];
+        array[array.Length - 1 - i] = temp;
     }
-   
 }
-
-
 
 
 int[] NewRandomArray(int size, int minValue, int maxValue)
@@ -36,4 +33,6 @@ int GetInfo(string msg)
 
 int size = GetInfo("Vvedite rezmer massiva: ");
 int[] array = NewRandomArray(size, 1, 10);
+Console.Write($"[{string.Join(",", array)}] -> ");
 ReversedArray(array);
+Console.WriteLine($"[{string.Join(",", array)}]");
