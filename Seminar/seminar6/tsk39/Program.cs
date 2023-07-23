@@ -6,9 +6,13 @@
 
 int[] ReversedArray(int[] array)
 {
-    int temp = array[0];
-    array[0] = array[array.Length-1];
-    array[array.Length-1] = temp;
+    for (int i = 0; i < array.Length; i++)
+    {
+         int temp = array[i];
+        array[i] = array[array.Length-1];
+        array[array.Length-1] = temp;
+    }
+   
 }
 
 
