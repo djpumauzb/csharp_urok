@@ -1,20 +1,15 @@
 ﻿// Napishite programmu, kotoraya budet sozdavat' 
 //kopiyu massiva s pomoshyu poelementnogo kopirovaniya
 
-void ReArray(int[] array) 
+int[] ReArray(int[] array) 
 {
-    int copy = 0;
+    int[] copy = new int[array.Length];
     for (int i = 0; i < array.Length; i++)
     {
-       copy = array[i];
-       Console.Write(copy);
+        copy[i] = array[i];
     }
+    return copy;
 }
-
-
-
-
-
 
 int[] NewRandomArray(int size, int minValue, int maxValue)
 {
@@ -25,5 +20,5 @@ int[] NewRandomArray(int size, int minValue, int maxValue)
 }
 
 int[] array = NewRandomArray(5, 1, 10);
-int[] reArray = ReArray(array);
-Console.Write($"[{string.Join(",", array)}] -> {reArray} ");
+int[] copy = ReArray(array);
+Console.WriteLine($"[{string.Join(",", array)}] -> {string.Join(",", copy)}");
