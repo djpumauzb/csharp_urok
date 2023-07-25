@@ -6,7 +6,7 @@
 
 void PrntDoDoubleMassive(int[,] massive)
 {
-        for (int i = 0; i < massive.GetLength(0); i++)
+        for (int i = 0; i < massive.GetLength(0); i++) // novaya funksiya dlya dvuxmernix massivax
     {
         for (int j = 0; j < massive.GetLength(1); j++)
         {
