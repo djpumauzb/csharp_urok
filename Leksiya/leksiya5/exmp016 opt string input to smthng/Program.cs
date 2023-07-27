@@ -11,11 +11,11 @@ Console.WriteLine(text);
 
 var data = text.Split(" ")
                 .Select(item => item.Split(","))
-                .Select(cordinate => (int.Parse(cordinate[0]), int.Parse(cordinate[1])))
+                .Select(cordinate => (x: int.Parse(cordinate[0]), y: int.Parse(cordinate[1])))
                 .ToArray();
 
 for (int i = 0; i < data.Length; i++)
 {
-    Console.WriteLine(data[i].Item1*10);
+    Console.WriteLine(data[i].x*10);
     Console.WriteLine();
 }
