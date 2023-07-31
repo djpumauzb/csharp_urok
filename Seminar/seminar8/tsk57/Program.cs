@@ -54,8 +54,6 @@ void GetDigit(int[,] massive)
     }
 }
 
-
-
 void PrntDoDoubleMassive(int[,] massive)
 {
     for (int i = 0; i < massive.GetLength(0); i++) // novaya funksiya dlya dvuxmernix massivax
