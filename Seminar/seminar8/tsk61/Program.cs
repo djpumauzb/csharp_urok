@@ -1,9 +1,6 @@
-﻿
+﻿// Vivesti pervie N strok treugolnika Paskalya. 
+// Sdekat' vivod v vide ravnobedrennogo treugolnika
     
-
-    
-
-
 int[,] GeneratePascalTriangle(int N)
     {
         int[,] triangle = new int[N, N];

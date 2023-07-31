@@ -9,3 +9,59 @@
 // 9 5 3 2
 // 8 4 4 2
 
+
+
+void OrderMassive(int[,] massive)
+{
+    int rows = massive.GetLength(0);
+    int columns = massive.GetLength(1);
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            
+        }
+    }
+}
+
+
+
+
+void PrntDoDoubleMassive(int[,] massive)
+{
+    for (int i = 0; i < massive.GetLength(0); i++) // novaya funksiya dlya dvuxmernix massivax
+    {
+        for (int j = 0; j < massive.GetLength(1); j++)
+        {
+            Console.Write($"{massive[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] DoDoubleMassive(int rows, int columns, int minValue, int maxValue)
+{
+    int[,] result = new int[rows, columns];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            result[i, j] = new Random().Next(minValue, maxValue + 1);
+        }
+    }
+    return result;
+}
+
+int GetInfo(string msg)
+{
+    Console.Write(msg);
+    int inputNum = Convert.ToInt32(Console.ReadLine());
+    return inputNum;
+}
+
+int rows = GetInfo("Vvedite kol strok massiva: ");
+int columns = GetInfo("Vvedite kol stolbcov massiva: ");
+
+int[,] massive = DoDoubleMassive(rows, columns, 0, 10);
+PrntDoDoubleMassive(massive);
+OrderMassive(massive);
