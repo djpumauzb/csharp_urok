@@ -32,32 +32,27 @@ int[,] DeleteMin(int[,] massive)
             }
         }
     }
-    Console.WriteLine($"Minimalnoe chislo {massive[minRows, minColumns]}, po adresu [{minRows}, {minColumns}]");
-    int countRows = 0;
-    int countColumns = 0;
+
     int[,] newMassive = new int[rows - 1, columns - 1];
+    int newRow = 0;
     for (int i = 0; i < rows; i++)
     {
-        countColumns = 0;
+        if (i == minRows)
+            continue;
+
+        int newColumn = 0;
         for (int j = 0; j < columns; j++)
         {
             if (j == minColumns)
-            {
-                countColumns = 1;
                 continue;
-            }
-            newMassive[i - countRows, j - countColumns] = massive[i, j];
+
+            newMassive[newRow, newColumn] = massive[i, j];
+            newColumn++;
         }
-        if (i == minRows)
-        {
-            countRows = 1;
-            continue;
-        }
+        newRow++;
     }
     return newMassive;
 }
-
-
 
 
 void PrntDoDoubleMassive(int[,] massive)
@@ -98,5 +93,4 @@ int columns = GetInfo("Vvedite kol stolbcov massiva: ");
 int[,] massive = DoDoubleMassive(rows, columns, 0, 10);
 PrntDoDoubleMassive(massive);
 Console.WriteLine();
-DeleteMin(massive);
-PrntDoDoubleMassive(massive);
+PrntDoDoubleMassive(DeleteMin(massive));
