@@ -15,17 +15,26 @@ void OrderMassive(int[,] massive)
 {
     int rows = massive.GetLength(0);
     int columns = massive.GetLength(1);
+
     for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < columns; j++)
+        for (int j = 0; j < columns - 1; j++)
         {
-            
+            int maxIndex = j;
+
+            for (int k = j + 1; k < columns; k++)
+            {
+                if (massive[i, k] > massive[i, maxIndex]) maxIndex = k;
+            }
+            if (maxIndex != j)
+            {
+                int temp = massive[i, j];
+                massive[i, j] = massive[i, maxIndex];
+                massive[i, maxIndex] = temp;
+            }
         }
     }
 }
-
-
-
 
 void PrntDoDoubleMassive(int[,] massive)
 {
@@ -65,3 +74,5 @@ int columns = GetInfo("Vvedite kol stolbcov massiva: ");
 int[,] massive = DoDoubleMassive(rows, columns, 0, 10);
 PrntDoDoubleMassive(massive);
 OrderMassive(massive);
+Console.WriteLine("Uporozhdenniy massiv: ");
+PrntDoDoubleMassive(massive);
