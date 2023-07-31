@@ -22,21 +22,38 @@
 
 void GetDigit(int[,] massive)
 {
-    for (int k = 0; k < massive.Length; k++)
+    int rows = massive.GetLength(0);
+    int columns = massive.GetLength(1);
+    // Проверяем, является ли массив одномерным (содержит только одну строку)
+    if (rows == 1)
     {
-        int count = 0;
-        int rows = massive.GetLength(0);
-        int columns = massive.GetLength(1);
-        for (int i = 0; i < rows; i++)
+        for (int k = 0; k < columns; k++)
         {
+            int count = 0;
             for (int j = 0; j < columns; j++)
             {
-                if (massive[i, j] == k) count++;
+                if (massive[0, j] == k) count++;
             }
+            if (count != 0) Console.WriteLine($"{k} встречается {count} раз");
         }
-        if (count != 0) Console.WriteLine($"{k} vstrechaetsya {count} raz");
+    }
+    else
+    {
+        for (int k = 0; k < massive.Length; k++)
+        {
+            int count = 0;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (massive[i, j] == k) count++;
+                }
+            }
+            if (count != 0) Console.WriteLine($"{k} встречается {count} раз");
+        }
     }
 }
+
 
 
 void PrntDoDoubleMassive(int[,] massive)
