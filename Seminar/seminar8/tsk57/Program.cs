@@ -20,6 +20,24 @@
 
 
 
+void GetDigit(int[,] massive)
+{
+    for (int k = 0; k < massive.Length; k++)
+    {
+        int count = 0;
+        int rows = massive.GetLength(0);
+        int columns = massive.GetLength(1);
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                if (massive[i, j] == k) count++;
+            }
+        }
+        if (count != 0) Console.WriteLine($"{k} vstrechaetsya {count} raz");
+    }
+}
+
 
 void PrntDoDoubleMassive(int[,] massive)
 {
@@ -56,5 +74,6 @@ int GetInfo(string msg)
 int rows = GetInfo("Vvedite kol strok massiva: ");
 int columns = GetInfo("Vvedite kol stolbcov massiva: ");
 
-int[,] massive = DoDoubleMassive(rows, columns, 1, 10);
+int[,] massive = DoDoubleMassive(rows, columns, 0, 10);
 PrntDoDoubleMassive(massive);
+GetDigit(massive);
