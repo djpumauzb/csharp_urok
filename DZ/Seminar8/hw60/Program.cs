@@ -6,27 +6,15 @@
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-
-
-
-
-
-
-
-
-
-
-
-
 void PrintTrippleMassive(int[,,] massive)
 {
     for (int i = 0; i < massive.GetLength(0); i++) // novaya funksiya dlya dvuxmernix massivax
     {
         for (int j = 0; j < massive.GetLength(1); j++)
         {
-            for (int k = 0; k < massive.GetLength(3); k++)
+            for (int k = 0; k < massive.GetLength(2); k++)
             {
-                Console.Write($"{massive[i, j, k]} ");
+                Console.WriteLine($"{massive[i, j, k]}({i},{j},{k})");
             }
         }
         Console.WriteLine();
