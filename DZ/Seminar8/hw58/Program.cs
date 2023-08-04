@@ -95,4 +95,3 @@ PrntDoDoubleMassive(massive);
 Console.WriteLine();
 PrntDoDoubleMassive(massive2);
 MultiplyMatrices(massive, massive2);
->>>>>>> 105f5fa7ba71c6d58a6979fd4d8ea2b4d81fcfed
