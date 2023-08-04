@@ -7,6 +7,10 @@
 
 void NaturalNumber(int M, int N)
 {
+    if (M > N) {
+        Console.WriteLine("Vvedite M do N!: M < N)");
+        return;
+    }
     Console.Write($"M = {M}; N = {N} -> ");
     for (int i = M; i <= N; i++)
     {
