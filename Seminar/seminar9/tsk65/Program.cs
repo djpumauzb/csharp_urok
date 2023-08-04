@@ -5,21 +5,30 @@
 
 
 
-void NaturalNumber(int M, int N)
+// void NaturalNumber(int M, int N)
+// {
+//     if (M > N) {
+//         Console.WriteLine("Vvedite M do N!: M < N)");
+//         return;
+//     }
+//     Console.Write($"M = {M}; N = {N} -> ");
+//     for (int i = M; i <= N; i++)
+//     {
+//         Console.Write($"{i}");
+//         if (i < N)
+//         {
+//             Console.Write(",");
+//         }
+//     }
+// }
+
+string NaturalNumber(int M, int N) // thi is recursion :|
 {
-    if (M > N) {
-        Console.WriteLine("Vvedite M do N!: M < N)");
-        return;
-    }
-    Console.Write($"M = {M}; N = {N} -> ");
-    for (int i = M; i <= N; i++)
+    if (M < N)
     {
-        Console.Write($"{i}");
-        if (i < N)
-        {
-            Console.Write(",");
-        }
+        return $"{M}, {NaturalNumber(M + 1, N)}";
     }
+    else return Convert.ToString(N);
 }
 
 
@@ -33,4 +42,5 @@ int GetInfo(string msg)
 int M = GetInfo("Vvedite znachenie M: ");
 int N = GetInfo("Vvedite znachenie N: ");
 
-NaturalNumber(M, N);
+string result = NaturalNumber(M, N);
+Console.WriteLine($"M = {M}; N = {N} -> {result} ");
